@@ -2,37 +2,42 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Sidebar from "./sidebar";
+
 export default function Home() {
   const [isDownloading, setIsDownloading] = useState(false);
-  type Tech = {
+  
+  // Define interfaces instead of types for better readability
+  interface Tech {
     id: number;
     photoUrl: string;
     tech: string;
-  };
-  type Demo = {
+  }
+  
+  interface Demo {
     id: number;
     logo: string;
     title: string;
     about: string;
     url: string;
-  };
+  }
 
   const Projects: Demo[] = [
     {
       id: 1,
       logo: "/logo/logo.png",
-      about: "SkillHub is a platform that connects skilled workers with those in need of reliable services,ensuring a trusted hiring process and better service delivery.",
+      about: "SkillHub is a platform that connects skilled workers with those in need of reliable services, ensuring a trusted hiring process and better service delivery.",
       title: "SKILLHUB",
       url: "https://skill-hub-yk14.vercel.app/",
     },
     {
       id: 2,
       logo: "/logo/image.png",
-      about: "Greenville EcoSolutions is an environmentally conscious organization dedicated to sustainable solutions for waste management, recycling, and eco-friendly practices. The company's mission is toreduce environmental impact through innovative strategies and technologies that foster a cleaner,more sustainable world.",
+      about: "Greenville EcoSolutions is an environmentally conscious organization dedicated to sustainable solutions for waste management, recycling, and eco-friendly practices. The company's mission is to reduce environmental impact through innovative strategies and technologies that foster a cleaner, more sustainable world.",
       title: "GREENVILLE",
       url: "https://greenville-0yx8.onrender.com/",
     },
   ];
+  
   const Technologies: Tech[] = [
     {
       id: 1,
@@ -136,27 +141,33 @@ AltSchool Africa
 - English (Fluent)
 - Yoruba (Native)`;
 
-    // Create a Blob from the resume content
-    const blob = new Blob([resumeContent], { type: "text/markdown" });
+    try {
+      // Create a Blob from the resume content
+      const blob = new Blob([resumeContent], { type: "text/markdown" });
 
-    // Create a URL for the Blob
-    const url = URL.createObjectURL(blob);
+      // Create a URL for the Blob
+      const url = URL.createObjectURL(blob);
 
-    // Create a link element and trigger download
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "Shittu_Qudus_Adekunle_Resume.md";
-    document.body.appendChild(a);
-    a.click();
+      // Create a link element and trigger download
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "Shittu_Qudus_Adekunle_Resume.md";
+      document.body.appendChild(a);
+      a.click();
 
-    // Clean up
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+      // Clean up
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
 
-    setTimeout(() => {
+      setTimeout(() => {
+        setIsDownloading(false);
+      }, 1000);
+    } catch (error) {
+      console.error("Download failed:", error);
       setIsDownloading(false);
-    }, 1000);
+    }
   };
+
   return (
     <>
       <div className="sidebar-comp">
@@ -165,21 +176,20 @@ AltSchool Africa
       <div className="home-content">
         <div className="intro-text">
           <div className="into">
-            <span className="name-text">Hi,i'm SHITTU </span>
+            <span className="name-text">Hi, I&apos;m SHITTU </span>
             <span className="about-text">
-              During some year as
-              <span className="ft">Front-End Software Engineer</span>. My role
+              During my years as a{" "}
+              <span className="ft">Front-End Software Engineer</span>, my role
               has extended beyond coding to effective communication with various
-              departments, to define new features and spearheading the
+              departments, defining new features and spearheading the
               development of new apps.
             </span>
-            <br></br>
+            <br />
             <button
               className="res-btn"
               onClick={handleDownload}
               disabled={isDownloading}
             >
-              {" "}
               {isDownloading ? "Downloading..." : "Download Resume"}
             </button>
           </div>
@@ -210,10 +220,9 @@ AltSchool Africa
               {Technologies.map((technology) => (
                 <div className="tech-item" key={technology.id}>
                   <span className="tech-icon">
-                    {" "}
                     <Image
                       src={technology.photoUrl}
-                      alt="PROFILE PIC"
+                      alt={`${technology.tech} icon`}
                       height={300}
                       width={500}
                     />
@@ -225,10 +234,9 @@ AltSchool Africa
               {Technologies.map((technology) => (
                 <div className="tech-item" key={`dup-${technology.id}`}>
                   <span className="tech-icon">
-                    {" "}
                     <Image
                       src={technology.photoUrl}
-                      alt="PROFILE PIC"
+                      alt={`${technology.tech} icon`}
                       height={300}
                       width={500}
                     />
@@ -243,29 +251,27 @@ AltSchool Africa
 
       <div className="past-projct">
         <h2 className="x-projects">Past projects</h2>
-        <br></br>
+        <br />
         <div className="card-container">
           {Projects.map((project) => (
             <div key={project.id} className="project-card">
               <div className="cards">
                 <div className="card-content">
-                  <div className="imagediv">
-
-                  </div>
+                  <div className="imagediv"></div>
                   <div className="project-info">
-                                        <span className="project-icon">
+                    <span className="project-icon">
                       <Image
                         src={project.logo}
-                        alt="PROFILE PIC"
+                        alt={`${project.title} logo`}
                         height={100}
                         width={100}
                       />
                     </span>
-                    <span className="">{project.title}</span>
+                    <span className="project-title">{project.title}</span>
                     <Link className="project-url" href={project.url}>
                       <span>{project.url}</span>
                     </Link>
-                    <span>{project.about}</span>
+                    <span className="project-description">{project.about}</span>
                   </div>
                 </div>
               </div>
