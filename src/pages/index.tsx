@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Image from "next/image";
-import { ReactNode } from "react";
 import Link from "next/link";
 import Sidebar from "./sidebar";
 export default function Home() {
@@ -168,7 +167,7 @@ AltSchool Africa
           <div className="into">
             <span className="name-text">Hi,i'm SHITTU </span>
             <span className="about-text">
-              During some year as{" "}
+              During some year as
               <span className="ft">Front-End Software Engineer</span>. My role
               has extended beyond coding to effective communication with various
               departments, to define new features and spearheading the
@@ -247,7 +246,7 @@ AltSchool Africa
         <br></br>
         <div className="card-container">
           {Projects.map((project) => (
-            <div className="project-card">
+            <div key={project.id} className="project-card">
               <div className="cards">
                 <div className="card-content">
                   <div className="imagediv">
