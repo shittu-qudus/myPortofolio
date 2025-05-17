@@ -7,7 +7,7 @@ export default function Home() {
   const [isDownloading, setIsDownloading] = useState(false);
   type Tech = {
     id: number;
-    photoUrl: ReactNode;
+    photoUrl: string;
     tech: string;
   };
   type Demo = {
