@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "next/link";    
 import Sidebar from "./sidebar";
 
 export default function Home() {
@@ -8,19 +8,14 @@ export default function Home() {
   
   const handleDownload = () => {
     setIsDownloading(true);
-
-    // Create a temporary link element
-    const link = document.createElement("a");
-    link.href = "\public\Blue Simple Professional CV Resume (1).pdf"; // relative path from public/
-    link.download = "Shittu_Qudus_Resume.pdf"; // name of downloaded file
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
     
-    setTimeout(() => setIsDownloading(false), 1000); // Reset state after download
+   
+    window.open("https://drive.google.com/uc?export=download&id=1TH6a9ozGN2fWyCQ_3oE5e-PSEmOjkHJB", "_blank");
+    
+    setTimeout(() => setIsDownloading(false), 1000);
   };
   
-  // Define interfaces instead of types for better readability
+ 
   interface Tech {
     id: number;
     photoUrl: string;
