@@ -6,6 +6,20 @@ import Sidebar from "./sidebar";
 export default function Home() {
   const [isDownloading, setIsDownloading] = useState(false);
   
+  const handleDownload = () => {
+    setIsDownloading(true);
+
+    // Create a temporary link element
+    const link = document.createElement("a");
+    link.href = "\public\Blue Simple Professional CV Resume (1).pdf"; // relative path from public/
+    link.download = "Shittu_Qudus_Resume.pdf"; // name of downloaded file
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    
+    setTimeout(() => setIsDownloading(false), 1000); // Reset state after download
+  };
+  
   // Define interfaces instead of types for better readability
   interface Tech {
     id: number;
@@ -81,93 +95,6 @@ export default function Home() {
     },
   ];
 
-  const handleDownload = () => {
-    setIsDownloading(true);
-
-    // Resume content as a string
-    const resumeContent = `# SHITTU QUDUS ADEKUNLE
-**Frontend Developer**  
-Lagos, Nigeria  
-Phone: 08112211061  
-Email: shittuqadekunle@gmail.com  
-LinkedIn: https://www.linkedin.com/in/shittu-qudus-5787762ab/ | GitHub: https://github.com/shittu-qudus
-
-## PROFESSIONAL SUMMARY
-Dedicated Frontend Developer with experience building responsive, user-friendly web applications. Passionate about creating seamless digital experiences while leveraging my background in Food Science to bring a unique perspective to technical challenges. Seeking opportunities to contribute my skills in React, JavaScript, and UI/UX design to innovative projects.
-
-## EDUCATION
-**Bachelor of Technology in Food Science and Technology**  
-Kwara State University, Malete, Kwara State, Nigeria  
-*2018 - 2024*
-
-## SKILLS
-- **Programming Languages**: JavaScript, TypeScript
-- **Frontend Technologies**: React, Next.js, Tailwind CSS
-- **Version Control**: Git
-- **Additional Skills**: Responsive Design, SEO Optimization, UI/UX Principles
-
-## WORK EXPERIENCE
-**Production Intern**  
-Lagasef Bakery, Ogun State, Nigeria  
-*2022 - 2023*
-- Collaborated with production team to ensure quality control in bread manufacturing processes
-- Documented production workflows and suggested optimizations to improve efficiency
-- Gained valuable experience in operational management and team coordination
-
-## PROJECTS
-
-### SkillHub
-**Frontend Developer**  
-*Technologies: JavaScript, React, CSS*
-- Developed a responsive platform that connects skilled workers with clients seeking reliable services
-- Implemented user-friendly interfaces ensuring intuitive navigation and seamless user experience
-- Optimized application for SEO to improve discoverability and market reach
-- https://github.com/shittu-qudus/SkillHub | https://skill-hub-yk14.vercel.app/
-
-### Greenville EcoSolutions
-**Frontend Developer**  
-*Technologies: JavaScript, React, CSS*
-- Contributed to the frontend development of an eco-conscious platform focused on sustainable waste management
-- Created responsive layouts that effectively showcased the company's environmental initiatives
-- Enhanced user interface to optimize site performance and accessibility standards
-- https://greenville-0yx8.onrender.com/
-
-## CERTIFICATIONS
-**Frontend Engineering**  
-AltSchool Africa  
-*Expected Completion: 2025*
-
-## LANGUAGES
-- English (Fluent)
-- Yoruba (Native)`;
-
-    try {
-      // Create a Blob from the resume content
-      const blob = new Blob([resumeContent], { type: "text/markdown" });
-
-      // Create a URL for the Blob
-      const url = URL.createObjectURL(blob);
-
-      // Create a link element and trigger download
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = "Shittu_Qudus_Adekunle_Resume.md";
-      document.body.appendChild(a);
-      a.click();
-
-      // Clean up
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-
-      setTimeout(() => {
-        setIsDownloading(false);
-      }, 1000);
-    } catch (error) {
-      console.error("Download failed:", error);
-      setIsDownloading(false);
-    }
-  };
-
   return (
     <>
       <div className="sidebar-comp">
@@ -185,7 +112,7 @@ AltSchool Africa
               development of new apps.
             </span>
             <br />
-            <button
+           <button
               className="res-btn"
               onClick={handleDownload}
               disabled={isDownloading}
