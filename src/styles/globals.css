@@ -1,4 +1,4 @@
-
+@import "tailwindcss";
 body {
   background-color: black;
 }
@@ -16,7 +16,9 @@ body {
   margin: 0;
   padding: 0;
 }
-
+#about-comp{
+  margin: 0 100px;
+}
 /* Animation keyframes */
 @keyframes fadeIn {
   from { opacity: 0; }

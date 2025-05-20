@@ -6,7 +6,7 @@ const About = () => {
       <div className="sidebar-comp">
         <Sidebar />
       </div>
-      <main className="max-w-3xl mx-auto px-4 mt-0py-12">
+      <main id="about-comp" className="max-w-3xl mx-auto px-4 mt-0py-12 ml-200">
         <section className="">
           <h1 className="text-4xl font-bold mb-4 text-center">About Me</h1>
           <p className="text-lg text-gray-700">
