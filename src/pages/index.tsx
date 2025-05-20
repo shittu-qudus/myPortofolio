@@ -10,7 +10,7 @@ export default function Home() {
     setIsDownloading(true);
     
    
-    window.open("https://drive.google.com/uc?export=download&id=1TH6a9ozGN2fWyCQ_3oE5e-PSEmOjkHJB", "_blank");
+    window.open("https://drive.google.com/file/d/1wykw8-19X_tBO8lDM0VkVBnrpoWJXoWv/view?usp=sharing", "_blank");
     
     setTimeout(() => setIsDownloading(false), 1000);
   };
@@ -99,14 +99,28 @@ export default function Home() {
         <div className="intro-text">
           <div className="into">
             <span className="name-text">Hi, I&apos;m SHITTU </span>
-            <span className="about-text">
+           <div className="lol">
+             <span className="about-text">
               During my years as a{" "}
               <span className="ft">Front-End Software Engineer</span>, my role
               has extended beyond coding to effective communication with various
               departments, defining new features and spearheading the
               development of new apps.
             </span>
+            
             <br />
+             <div className="image-cont">
+            <Image
+              className="mypic"
+              src="/icons/id.jpg"
+              alt="PROFILE PIC"
+              height={300}
+              width={300}
+              priority
+              
+            />
+          </div>
+           </div>
            <button
               className="res-btn"
               onClick={handleDownload}
@@ -115,16 +129,7 @@ export default function Home() {
               {isDownloading ? "Downloading..." : "Download Resume"}
             </button>
           </div>
-          <div className="image-cont">
-            <Image
-              className="rounded-2xl"
-              src="/icons/id.jpg"
-              alt="PROFILE PIC"
-              height={300}
-              width={500}
-              priority
-            />
-          </div>
+         
         </div>
       </div>
 
@@ -145,8 +150,8 @@ export default function Home() {
                     <Image
                       src={technology.photoUrl}
                       alt={`${technology.tech} icon`}
-                      height={300}
-                      width={500}
+                      height={200}
+                      width={200}
                     />
                   </span>
                   <span className="tech-name">{technology.tech}</span>
@@ -159,8 +164,8 @@ export default function Home() {
                     <Image
                       src={technology.photoUrl}
                       alt={`${technology.tech} icon`}
-                      height={300}
-                      width={500}
+                      height={200}
+                      width={200}
                     />
                   </span>
                   <span className="tech-name">{technology.tech}</span>
@@ -174,7 +179,7 @@ export default function Home() {
       <div className="past-projct">
         <h2 className="x-projects">Past projects</h2>
         <br />
-        <div className="card-container">
+        <div className="card-container"  id="bbb">
           {Projects.map((project) => (
             <div key={project.id} className="project-card">
               <div className="cards">
