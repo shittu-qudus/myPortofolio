@@ -45,6 +45,13 @@ export default function Home() {
       title: "GREENVILLE",
       url: "https://greenville-0yx8.onrender.com/",
     },
+    {
+        id: 3,
+      logo: "/logo/blacksfit.png",
+      about: "BlacksFit is a modern, user-friendly e-commerce platform built for a growing fashion brand, offering a seamless shopping experience. The site is fully responsive, optimized for performance, and is currently live and operational for business.",
+      title: "BLACKSFIT",
+      url: "https://blacksfit-test.vercel.app/",
+    }
   ];
   
   const Technologies: Tech[] = [
