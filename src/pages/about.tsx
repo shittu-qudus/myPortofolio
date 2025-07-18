@@ -10,7 +10,7 @@ const About = () => {
         <section className="">
           <h1 className="text-4xl font-bold mb-4 text-center">About Me</h1>
           <p className="text-lg text-gray-700">
-            Hi, I&apos;m <span className="font-semibold"><span className="text-2xl text-white">SHITTU QUDUS. A</span></span>a passionate Frontend Developer with a background in Food Science and Technology.
+            Hi, I&apos;m <span className="font-semibold"><span className="text-2xl text-white">SHITTU QUDUS. A</span></span>,a passionate Frontend Developer with a background in Food Science and Technology.
             While I started in the sciences, my curiosity and love for technology led me to make a bold transition into web development.
           </p>
         </section>
