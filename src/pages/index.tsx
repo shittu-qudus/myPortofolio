@@ -51,6 +51,13 @@ export default function Home() {
       about: "BlacksFit is a modern, user-friendly e-commerce platform built for a growing fashion brand, offering a seamless shopping experience. The site is fully responsive, optimized for performance, and is currently live and operational for business.",
       title: "BLACKSFIT",
       url: "https://blacksfit-test.vercel.app/",
+    },
+    {
+        id: 4,
+      logo: "/logo/laundry.png",
+      about: "CleanEase is a smart laundry service platform that simplifies laundry management with an integrated calendar for scheduling pickups/deliveries, subscription plans for recurring orders, and an auto-responder for instant customer support. It offers real-time tracking, automated reminders, and flexible billing.Making laundry effortless for busy households and businesses.",
+      title: "CLEANEASE",
+      url: "https://clean-ease-orcin.vercel.app/",
     }
   ];
   
