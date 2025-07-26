@@ -116,7 +116,7 @@ export default function Home() {
             </span>
             
             <br />
-             <div className="image-cont">
+             {/* <div className="image-cont">
             <Image
               className="mypic"
               src="/icons/id.jpg"
@@ -126,7 +126,7 @@ export default function Home() {
               priority
               
             />
-          </div>
+          </div> */}
            </div>
            <button
               className="res-btn"
@@ -201,10 +201,14 @@ export default function Home() {
                         width={100}
                       />
                     </span>
-                    <span className="project-title">{project.title}</span>
-                    <Link className="project-url" href={project.url}>
+                    <span className="project-title"><Link href={project.url} legacyBehavior>
+  <a target="_blank" rel="noopener noreferrer">
+    {project.title}
+  </a>
+</Link></span>
+                    {/* <Link className="project-url" href={project.url}>
                       <span>{project.url}</span>
-                    </Link>
+                    </Link> */}
                     <span className="project-description">{project.about}</span>
                   </div>
                 </div>

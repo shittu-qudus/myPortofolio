@@ -304,6 +304,13 @@ li {
   justify-content: space-between;
   gap: 20px;
 }
+.project-title{
+ text-decoration:underline ;
+}
+.project-title:hover{
+   color: var(--secondary-color);
+    transition: all 0.3s ease;
+}
 
 .project-url {
   position: relative;
