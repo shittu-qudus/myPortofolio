@@ -43,7 +43,7 @@ export default function Home() {
       logo: "/logo/image.png",
       about: "Greenville EcoSolutions is an environmentally conscious organization dedicated to sustainable solutions for waste management, recycling, and eco-friendly practices. The company's mission is to reduce environmental impact through innovative strategies and technologies that foster a cleaner, more sustainable world.",
       title: "GREENVILLE",
-      url: "https://greenville-0yx8.onrender.com/",
+      url: "https://greenvilles.vercel.app/",
     },
     {
         id: 3,
