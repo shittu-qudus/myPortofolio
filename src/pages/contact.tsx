@@ -53,7 +53,7 @@ const Contact = () => {
       } else {
         throw new Error("Failed to send message");
       }
-    } catch (err) {
+    } catch (err: any) {
       setIsSubmitting(false);
       setError("Failed to send message. Please try again or email me directly.");
     }
@@ -74,14 +74,14 @@ const Contact = () => {
           <div className="bg-gradient-to-br from-[#111]/90 to-[#1a1a1a]/90 border border-gray-800/50 rounded-3xl p-8 shadow-2xl backdrop-blur-sm">
             <div className="mb-8">
               <h2 className="text-3xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent mb-3">
-                Let's Connect
+                Let&apos;s Connect
               </h2>
               <div className="w-12 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
             </div>
             
             <p className="text-gray-300 text-lg leading-relaxed mb-8 font-light">
-              I'm currently available for new opportunities and exciting projects. 
-              Whether you have a question or just want to say hi, I'll get back to you as soon as possible.
+              I&apos;m currently available for new opportunities and exciting projects.
+              Whether you have a question or just want to say hi, I&apos;ll get back to you as soon as possible.
             </p>
 
             <div className="space-y-6">
@@ -154,7 +154,8 @@ const Contact = () => {
                 Message Sent Successfully!
               </h3>
               <p className="text-gray-400 mb-6 max-w-md mx-auto leading-relaxed">
-                Thank you for reaching out. I've received your message and will get back to you within 24 hours.
+           Thank you for reaching out. I&apos;ve received your message and will get back to you within 24 hours.
+
               </p>
               <div className="space-y-3 text-sm text-gray-500 max-w-sm mx-auto">
                 <p>📧 Check your email for confirmation</p>
@@ -175,7 +176,7 @@ const Contact = () => {
                 </h2>
                 <div className="w-12 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-4"></div>
                 <p className="text-gray-400 text-sm">
-                  Fill out the form below and I'll get back to you as soon as possible. All fields are required.
+                  Fill out the form below and I&apos;ll get back to you as soon as possible. All fields are required.
                 </p>
               </div>
 
