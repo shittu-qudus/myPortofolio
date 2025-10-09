@@ -26,6 +26,9 @@ const Sidebar = () => {
             <li>
               <Link href="about" onClick={toggleSidebar}>About</Link>
             </li>
+            <li>
+              <Link href="contact" onClick={toggleSidebar}>Contact</Link>
+            </li>
           </ul>
 
           <ul className="social-icons">

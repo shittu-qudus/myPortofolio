@@ -17,7 +17,8 @@ body {
   padding: 0;
 }
 #about-comp{
-  margin: 0 100px;
+ display: flex;
+ 
 }
 /* Animation keyframes */
 @keyframes fadeIn {

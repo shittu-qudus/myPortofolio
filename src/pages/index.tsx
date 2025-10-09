@@ -10,7 +10,7 @@ export default function Home() {
     setIsDownloading(true);
     
    
-    window.open("https://drive.google.com/file/d/1wykw8-19X_tBO8lDM0VkVBnrpoWJXoWv/view?usp=sharing", "_blank");
+    window.open("https://drive.google.com/file/d/1rAOfClLGTFDT_-SztJgB14wndx3v2apq/view?usp=share_link", "_blank");
     
     setTimeout(() => setIsDownloading(false), 1000);
   };
