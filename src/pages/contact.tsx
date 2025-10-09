@@ -53,7 +53,7 @@ const Contact = () => {
       } else {
         throw new Error("Failed to send message");
       }
-    } catch (err: any) {
+    } catch (err: unknown) {
       setIsSubmitting(false);
       setError("Failed to send message. Please try again or email me directly.");
     }
