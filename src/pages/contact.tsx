@@ -53,10 +53,10 @@ const Contact = () => {
       } else {
         throw new Error("Failed to send message");
       }
-    } catch (err: unknown) {
-      setIsSubmitting(false);
-      setError("Failed to send message. Please try again or email me directly.");
-    }
+    }  catch {
+  setIsSubmitting(false);
+  setError("Failed to send message. Please try again or email me directly.");
+}
   };
   <div className="sidebar-comp">
         <Sidebar />
