@@ -19,14 +19,26 @@ const About = () => {
           <h2 className="text-2xl font-semibold mb-3">My Journey</h2>
           <p className="text-gray-700">
             I completed a comprehensive frontend engineering program at AltSchool Africa, where I honed my skills in:
-          </p>
-          <ul className="list-disc list-inside mt-3 mb-3 text-gray-700 mx-auto inline-block justify-center align-center">
-            <li>JavaScript & TypeScript</li>
-            <li>React & Next.js</li>
-            <li>React Native for iOS & Android</li>
-            <li>Tailwind CSS & Git/GitHub</li>
-            <li>Building responsive, user-friendly interfaces</li>
-          </ul>
+          </p>   <ul className="flex flex-col sm:flex-row sm:flex-wrap gap-3 mt-3 mb-3 text-gray-700">
+                <li className="flex items-center sm:basis-1/2 md:basis-1/3">
+                   
+                    <span>  <span className="text-gray-500 mr-2">•</span>JavaScript & TypeScript</span>
+                </li>
+                <li className="flex items-center sm:basis-1/2 md:basis-1/3">
+                  
+                    <span>   <span className="text-gray-500 mr-2">•</span>React & Next.js</span>
+                </li>
+                <li className="flex items-center sm:basis-1/2 md:basis-1/3">
+                    <span>   <span className="text-gray-500 mr-2">•</span>React Native for iOS & Android</span>
+                </li>
+                <li className="flex items-center sm:basis-1/2 md:basis-1/3">
+                  
+                    <span>  <span className="text-gray-500 mr-2">•</span>Tailwind CSS & Git/GitHub</span>
+                </li>
+                <li className="flex items-center sm:basis-1/2 md:basis-1/3">
+                    <span>   <span className="text-gray-500 mr-2">•</span>Building responsive, user-friendly interfaces</span>
+                </li>
+            </ul>
           <p className="text-gray-700">
             My journey into tech has been self-driven, backed by hands-on projects and a hunger to keep learning and improving.
           </p>
