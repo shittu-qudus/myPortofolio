@@ -2,7 +2,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";    
 import Sidebar from "./sidebar";
-
+import Head from "next/head";
 export default function Home() {
   const [isDownloading, setIsDownloading] = useState(false);
   
@@ -102,10 +102,26 @@ export default function Home() {
       photoUrl: "/icons/html.png",
       tech: "HTML",
     },
+    {
+      id: 9,
+      photoUrl: "/icons/reactnative.png",
+      tech: "React Native",
+    },
+    {
+      id: 10,
+      photoUrl: "/icons/expo.png",
+      tech: "Expo",
+    }
   ];
 
   return (
     <>
+      <Head>
+        <title>Shittu Qudus Portfolio</title>
+        <meta name="description" content="Portfolio of Shittu Qudus, Frontend Developer and Mobile App Developer." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className="sidebar-comp">
         <Sidebar />
       </div>
