@@ -31,6 +31,13 @@ export default function Home() {
   }
 
   const Projects: Demo[] = [
+     {
+      id: 0,
+      logo: "/logo/smarthire.jpg",
+      about: "SmirtHire is a personal SaaS project I built to help job seekers create professional, ATS-optimized resumes and cover letters with ease. It generates clean, structured documents that meet modern hiring standards, offers customizable templates, and provides AI-assisted rewriting to improve clarity and impact. The platform is designed to simplify the job application process and will include additional features like portfolio generation, skills assessment, and interview prep tools as it evolves..",
+      title: "SMARTHIRE",
+      url: "https://smart-hire-ashy.vercel.app/",
+    },
     {
       id: 1,
       logo: "/logo/logo.png",
