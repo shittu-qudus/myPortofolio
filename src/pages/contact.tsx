@@ -36,9 +36,13 @@ const Contact = () => {
     }
   };
 
-  return (
+  return (<>
+  
+     <div className="sidebar-comp">
+        <Sidebar />
+      </div>
     <main className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 py-12">
-     
+      
       <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900 text-center md:text-left">
         Let&apos;s Build Something Amazing
       </h1>
@@ -118,7 +122,7 @@ const Contact = () => {
           </a>
         </p>
       </div>
-    </main>
+    </main></>
   );
 };
 

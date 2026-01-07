@@ -65,7 +65,15 @@ export default function Home() {
       about: "CleanEase is a smart laundry service platform that simplifies laundry management with an integrated calendar for scheduling pickups/deliveries, subscription plans for recurring orders, and an auto-responder for instant customer support. It offers real-time tracking, automated reminders, and flexible billing.Making laundry effortless for busy households and businesses.",
       title: "CLEANEASE",
       url: "https://clean-ease-orcin.vercel.app/",
+    },
+    {
+        id: 5,
+      logo: "/logo/nisha.png",
+      about: "A modern, responsive, and visually striking portfolio landing page designed for photographers. Built with Vite, React, and Tailwind CSS, this project highlights photography work, services, client testimonials, and a contact form, all optimized for SEO and social sharing.",
+      title: "Nisha pics",
+      url: "https://nisha-pics.vercel.app/",
     }
+    
   ];
   
   const Technologies: Tech[] = [
