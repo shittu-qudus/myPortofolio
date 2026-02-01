@@ -57,7 +57,7 @@ export default function Home() {
       logo: "/logo/blacksfit.png",
       about: "BlacksFit is a modern, user-friendly e-commerce platform built for a growing fashion brand, offering a seamless shopping experience. The site is fully responsive, optimized for performance, and is currently live and operational for business.",
       title: "BLACKSFIT",
-      url: "https://blacksfit-test.vercel.app/",
+      url: "https://www.blacksfit.com/",
     },
     {
         id: 4,
@@ -72,6 +72,14 @@ export default function Home() {
       about: "A modern, responsive, and visually striking portfolio landing page designed for photographers. Built with Vite, React, and Tailwind CSS, this project highlights photography work, services, client testimonials, and a contact form, all optimized for SEO and social sharing.",
       title: "Nisha pics",
       url: "https://nisha-pics.vercel.app/",
+    },
+
+    {
+        id: 6,
+      logo: "/logo/thetechgirl.png",
+      about: "This portfolio website showcases the product designer&apos;s creativity, strategic thinking, and end-to-end design process through selected case studies. A clean, intentional layout emphasizes usability, clarity, and strong visual hierarchy, allowing the work to stand out. Overall, it presents her as a well-rounded designer who balances user needs with business goals through clear visual storytelling.",
+      title: "Thetechgirl",
+      url: "https://azeez-adebola.vercel.app/",
     }
     
   ];
