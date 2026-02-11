@@ -3,19 +3,16 @@ import Image from "next/image";
 import Link from "next/link";    
 import Sidebar from "./sidebar";
 import Head from "next/head";
+
 export default function Home() {
   const [isDownloading, setIsDownloading] = useState(false);
   
   const handleDownload = () => {
     setIsDownloading(true);
-    
-   
     window.open("https://drive.google.com/file/d/1rAOfClLGTFDT_-SztJgB14wndx3v2apq/view?usp=share_link", "_blank");
-    
     setTimeout(() => setIsDownloading(false), 1000);
   };
   
- 
   interface Tech {
     id: number;
     photoUrl: string;
@@ -31,10 +28,10 @@ export default function Home() {
   }
 
   const Projects: Demo[] = [
-     {
+    {
       id: 0,
       logo: "/logo/smarthire.jpg",
-      about: "SmirtHire is a personal SaaS project I built to help job seekers create professional, ATS-optimized resumes and cover letters with ease. It generates clean, structured documents that meet modern hiring standards, offers customizable templates, and provides AI-assisted rewriting to improve clarity and impact. The platform is designed to simplify the job application process and will include additional features like portfolio generation, skills assessment, and interview prep tools as it evolves..",
+      about: "SmirtHire is a personal SaaS project I built to help job seekers create professional, ATS-optimized resumes and cover letters with ease. It generates clean, structured documents that meet modern hiring standards, offers customizable templates, and provides AI-assisted rewriting to improve clarity and impact.",
       title: "SMARTHIRE",
       url: "https://smart-hire-ashy.vercel.app/",
     },
@@ -48,40 +45,38 @@ export default function Home() {
     {
       id: 2,
       logo: "/logo/image.png",
-      about: "Greenville EcoSolutions is an environmentally conscious organization dedicated to sustainable solutions for waste management, recycling, and eco-friendly practices. The company's mission is to reduce environmental impact through innovative strategies and technologies that foster a cleaner, more sustainable world.",
+      about: "Greenville EcoSolutions is an environmentally conscious organization dedicated to sustainable solutions for waste management, recycling, and eco-friendly practices. The company's mission is to reduce environmental impact through innovative strategies and technologies.",
       title: "GREENVILLE",
       url: "https://greenvilles.vercel.app/",
     },
     {
-        id: 3,
+      id: 3,
       logo: "/logo/blacksfit.png",
       about: "BlacksFit is a modern, user-friendly e-commerce platform built for a growing fashion brand, offering a seamless shopping experience. The site is fully responsive, optimized for performance, and is currently live and operational for business.",
       title: "BLACKSFIT",
       url: "https://www.blacksfit.com/",
     },
     {
-        id: 4,
+      id: 4,
       logo: "/logo/laundry.png",
-      about: "CleanEase is a smart laundry service platform that simplifies laundry management with an integrated calendar for scheduling pickups/deliveries, subscription plans for recurring orders, and an auto-responder for instant customer support. It offers real-time tracking, automated reminders, and flexible billing.Making laundry effortless for busy households and businesses.",
+      about: "CleanEase is a smart laundry service platform that simplifies laundry management with an integrated calendar for scheduling pickups/deliveries, subscription plans for recurring orders, and an auto-responder for instant customer support.",
       title: "CLEANEASE",
       url: "https://clean-ease-orcin.vercel.app/",
     },
     {
-        id: 5,
+      id: 5,
       logo: "/logo/nisha.png",
-      about: "A modern, responsive, and visually striking portfolio landing page designed for photographers. Built with Vite, React, and Tailwind CSS, this project highlights photography work, services, client testimonials, and a contact form, all optimized for SEO and social sharing.",
-      title: "Nisha pics",
+      about: "A modern, responsive, and visually striking portfolio landing page designed for photographers. Built with Vite, React, and Tailwind CSS, this project highlights photography work, services, client testimonials, and a contact form.",
+      title: "Nisha Pics",
       url: "https://nisha-pics.vercel.app/",
     },
-
     {
-        id: 6,
+      id: 6,
       logo: "/logo/thetechgirl.png",
-      about: "This portfolio website showcases the product designer&apos;s creativity, strategic thinking, and end-to-end design process through selected case studies. A clean, intentional layout emphasizes usability, clarity, and strong visual hierarchy, allowing the work to stand out. Overall, it presents her as a well-rounded designer who balances user needs with business goals through clear visual storytelling.",
+      about: "This portfolio website showcases the product designer's creativity, strategic thinking, and end-to-end design process through selected case studies. A clean, intentional layout emphasizes usability, clarity, and strong visual hierarchy.",
       title: "Thetechgirl",
       url: "https://azeez-adebola.vercel.app/",
     }
-    
   ];
   
   const Technologies: Tech[] = [
@@ -145,36 +140,25 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      
       <div className="sidebar-comp">
         <Sidebar />
       </div>
+      
       <div className="home-content">
         <div className="intro-text">
           <div className="into">
             <span className="name-text">Hi, I&apos;m SHITTU </span>
-           <div className="lol">
-             <span className="about-text">
-              During my years as a{" "}
-              <span className="ft">Front-End Software Engineer</span>, my role
-              has extended beyond coding to effective communication with various
-              departments, defining new features and spearheading the
-              development of new apps.
-            </span>
-            
-            <br />
-             {/* <div className="image-cont">
-            <Image
-              className="mypic"
-              src="/icons/id.jpg"
-              alt="PROFILE PIC"
-              height={300}
-              width={300}
-              priority
-              
-            />
-          </div> */}
-           </div>
-           <button
+            <div className="lol">
+              <span className="about-text">
+                During my years as a{" "}
+                <span className="ft">Front-End Software Engineer</span>, my role
+                has extended beyond coding to effective communication with various
+                departments, defining new features and spearheading the
+                development of new apps.
+              </span>
+            </div>
+            <button
               className="res-btn"
               onClick={handleDownload}
               disabled={isDownloading}
@@ -182,7 +166,6 @@ export default function Home() {
               {isDownloading ? "Downloading..." : "Download Resume"}
             </button>
           </div>
-         
         </div>
       </div>
 
@@ -232,32 +215,27 @@ export default function Home() {
       <div className="past-projct">
         <h2 className="x-projects">Past projects</h2>
         <br />
-        <div className="card-container"  id="bbb">
+        <div className="card-container" id="bbb">
           {Projects.map((project) => (
             <div key={project.id} className="project-card">
-              <div className="cards">
-                <div className="card-content">
-                  <div className="imagediv"></div>
-                  <div className="project-info">
-                    <span className="project-icon">
-                      <Image
-                        src={project.logo}
-                        alt={`${project.title} logo`}
-                        height={100}
-                        width={100}
-                      />
-                    </span>
-                    <span className="project-title"><Link href={project.url} legacyBehavior>
-  <a target="_blank" rel="noopener noreferrer">
-    {project.title}
-  </a>
-</Link></span>
-                    {/* <Link className="project-url" href={project.url}>
-                      <span>{project.url}</span>
-                    </Link> */}
-                    <span className="project-description">{project.about}</span>
-                  </div>
-                </div>
+              <div className="card-image">
+                <Image
+                  src={project.logo}
+                  alt={`${project.title} screenshot`}
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 45vw, 30vw"
+                />
+              </div>
+              <div className="card-body">
+                <h3 className="project-title">
+                  <Link href={project.url} legacyBehavior>
+                    <a target="_blank" rel="noopener noreferrer">
+                      {project.title}
+                    </a>
+                  </Link>
+                </h3>
+                <p className="project-description">{project.about}</p>
               </div>
             </div>
           ))}
