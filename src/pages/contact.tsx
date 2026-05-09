@@ -44,7 +44,6 @@ const Contact = () => {
       </div>
 
       <main id="contact-comp">
-
         {/* ── Left: copy ── */}
         <div className="ct-left">
           <span className="ct-badge">Get in touch</span>
@@ -56,7 +55,6 @@ const Contact = () => {
             Got an idea, a collaboration request, or just want to say hello?
             Drop a message — I respond faster than you think.
           </p>
-
           <div className="ct-direct">
             <p className="ct-direct-label">Prefer direct contact?</p>
             <a href="mailto:shittuqadekunle@gmail.com" className="ct-email">
@@ -68,7 +66,6 @@ const Contact = () => {
         {/* ── Right: form ── */}
         <div className="ct-right">
           <form className="ct-form" onSubmit={handleSubmit}>
-
             <div className="ct-field">
               <label className="ct-label" htmlFor="name">Your Name</label>
               <input
@@ -113,7 +110,11 @@ const Contact = () => {
               disabled={status === "sending" || status === "success"}
               className="ct-btn"
             >
-              {status === "sending" ? "Sending…" : status === "success" ? "Message Sent ✓" : "Send Message →"}
+              {status === "sending"
+                ? "Sending..."
+                : status === "success"
+                ? "Message Sent ✓"
+                : "Send Message →"}
             </button>
 
             {status === "success" && (
@@ -128,7 +129,6 @@ const Contact = () => {
             )}
           </form>
         </div>
-
       </main>
 
       <style>{`
@@ -142,6 +142,7 @@ const Contact = () => {
           margin: 0 auto;
           padding: 4rem 1.5rem 5rem;
           min-height: 80vh;
+          box-sizing: border-box;
         }
 
         /* ── Left ── */
@@ -199,23 +200,25 @@ const Contact = () => {
           padding-bottom: 1px;
           transition: border-color 0.2s;
         }
-        .ct-email:hover {
-          border-color: #fff;
-        }
+        .ct-email:hover { border-color: #fff; }
 
         /* ── Right / Form ── */
         .ct-right {
           flex: 1;
+          width: 100%;
+          min-width: 0; /* prevent flex child overflow */
         }
         .ct-form {
           display: flex;
           flex-direction: column;
           gap: 1.25rem;
+          width: 100%;
         }
         .ct-field {
           display: flex;
           flex-direction: column;
           gap: 0.4rem;
+          width: 100%;
         }
         .ct-label {
           font-size: 0.8rem;
@@ -236,10 +239,9 @@ const Contact = () => {
           width: 100%;
           box-sizing: border-box;
           font-family: inherit;
+          display: block;
         }
-        .ct-input::placeholder {
-          color: rgba(255,255,255,0.25);
-        }
+        .ct-input::placeholder { color: rgba(255,255,255,0.25); }
         .ct-input:focus {
           border-color: rgba(255,255,255,0.45);
           background: rgba(255,255,255,0.08);
@@ -252,7 +254,7 @@ const Contact = () => {
         /* ── Button ── */
         .ct-btn {
           margin-top: 0.25rem;
-          padding: 0.8rem 1.5rem;
+          padding: 0.85rem 1.5rem;
           background: #fff;
           color: #000;
           font-size: 0.95rem;
@@ -262,16 +264,15 @@ const Contact = () => {
           cursor: pointer;
           transition: opacity 0.2s, transform 0.15s;
           width: 100%;
+          box-sizing: border-box;
+          display: block;
           font-family: inherit;
         }
         .ct-btn:hover:not(:disabled) {
           opacity: 0.88;
           transform: translateY(-1px);
         }
-        .ct-btn:disabled {
-          opacity: 0.5;
-          cursor: not-allowed;
-        }
+        .ct-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
         /* ── Feedback ── */
         .ct-feedback {
@@ -279,27 +280,44 @@ const Contact = () => {
           text-align: center;
           padding: 0.6rem 1rem;
           border-radius: 8px;
+          box-sizing: border-box;
+          width: 100%;
         }
         .ct-success {
-          background: rgba(74, 222, 128, 0.1);
+          background: rgba(74,222,128,0.1);
           color: #4ade80;
-          border: 1px solid rgba(74, 222, 128, 0.25);
+          border: 1px solid rgba(74,222,128,0.25);
         }
         .ct-error {
-          background: rgba(248, 113, 113, 0.1);
+          background: rgba(248,113,113,0.1);
           color: #f87171;
-          border: 1px solid rgba(248, 113, 113, 0.25);
+          border: 1px solid rgba(248,113,113,0.25);
         }
 
-        /* ── Mobile: stack columns ── */
+        /* ── Mobile ── */
         @media (max-width: 700px) {
           #contact-comp {
             flex-direction: column;
-            gap: 2.5rem;
-            padding: 2.5rem 1.2rem 4rem;
+            gap: 2rem;
+            padding: 2rem 1.2rem 4rem;
+            width: 100%;
+          }
+          .ct-left,
+          .ct-right {
+            width: 100%;
+            flex: none;
           }
           .ct-sub {
             max-width: 100%;
+          }
+          .ct-input,
+          .ct-btn {
+            width: 100%;
+            font-size: 1rem;
+            padding: 0.85rem 1rem;
+          }
+          .ct-textarea {
+            min-height: 140px;
           }
         }
       `}</style>
