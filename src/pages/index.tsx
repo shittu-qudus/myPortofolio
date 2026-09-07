@@ -29,6 +29,10 @@ const Technologies: Tech[] = [
   { id: 8, photoUrl: "/icons/html.png", tech: "HTML" },
   { id: 9, photoUrl: "/icons/reactnative.png", tech: "React Native" },
   { id: 10, photoUrl: "/icons/expo.png", tech: "Expo" },
+  { id: 11, photoUrl: "/icons/aws.png", tech: "AWS" },
+  { id: 10, photoUrl: "/icons/terraform.png", tech: "Terraform" },
+    { id: 11, photoUrl: "/icons/promtheus.png", tech: "Prometheus " },
+
 ];
 
 const Projects: Project[] = [
@@ -46,19 +50,35 @@ const Projects: Project[] = [
     title: "ThroughMyLens",
     url: "https://www.throughmylens.uk/",
   },
-  {
-    id: 0,
-    logo: "/logo/smarthire.jpg",
-    about: "SaaS tool that helps job seekers create ATS-optimized resumes and cover letters with AI-assisted rewriting and customizable templates.",
-    title: "SmartHire",
-    url: "https://smart-hire-ashy.vercel.app/",
+   {
+    id: 10,
+    logo: "/logo/north.png",
+    about: "A professional real estate platform built to showcase residential and commercial properties while providing clients with a seamless way to explore listings, view detailed property information, compare available options, and make enquiries. The platform combines a modern user experience with clear property presentation to help real estate businesses attract potential buyers, renters, and investors.",
+    title: "Noth&co",
+    url: "https://nort-oc.vercel.app/",
   },
+  
+
   {
     id: 1,
     logo: "/logo/logo.png",
     about: "A platform that connects skilled workers with those in need of reliable services, ensuring a trusted hiring process and better service delivery.",
     title: "SkillHub",
     url: "https://skill-hub-yk14.vercel.app/",
+  },
+   {
+    id: 0,
+   logo: "/logo/smarthire.jpg",
+     about: "SaaS tool that helps job seekers create ATS-optimized resumes and cover letters with AI-assisted rewriting and customizable templates.",
+     title: "SmartHire",
+    url: "https://smart-hire-ashy.vercel.app/",
+  },
+  {
+    id: 11,
+    logo: "/logo/autovault.png",
+about: "A comprehensive automotive platform that provides customers with a seamless way to browse, compare, buy, hire, and finance vehicles. The website features an extensive car listing system with detailed specifications, pricing, high-quality imagery, and flexible search and filtering options, making it easy for users to find vehicles that match their needs. With dedicated purchasing, vehicle hire, financing, and enquiry features, the platform serves as a complete digital showroom for automotive businesses looking to showcase their inventory, attract customers, and simplify the car-buying experience.",
+    title: "Noth&co",
+    url: "https://auto-mobilz.vercel.app/",
   },
   {
     id: 2,
@@ -139,7 +159,7 @@ export default function Home() {
       {/* ── Hero ── */}
       <section className="hm-hero">
         <div className="hm-hero-inner">
-          <span className="hm-badge">Frontend &amp; Mobile Developer</span>
+          <span className="hm-badge"> SOFTWARE ENGINEER</span>
           <h1 className="hm-hero-name">
             Hi, I&apos;m<br />
             <span className="hm-hero-highlight">SHITTU QUDUS.</span>

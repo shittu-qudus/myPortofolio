@@ -7,6 +7,9 @@ const skills = [
   "Tailwind CSS",
   "Git & GitHub",
   "Responsive UI Design",
+  "Node.js & Express",
+  "AWS (EC2, S3, Lambda)",
+  "Docker & CI/CD",
 ];
 
 const About = () => {
@@ -20,11 +23,11 @@ const About = () => {
 
         {/* ── Hero ── */}
         <section className="ab-hero">
-          <div className="ab-badge">Frontend &amp; Mobile Developer</div>
+          <div className="ab-badge">Frontend, Full-Stack &amp; Cloud Engineer</div>
           <h1 className="ab-name">SHITTU QUDUS</h1>
           <p className="ab-tagline">
             I build fast, accessible, and beautifully crafted digital experiences
-            — for the web and for your pocket.
+            — for the web, mobile, and the cloud.
           </p>
         </section>
 
@@ -40,9 +43,11 @@ const About = () => {
             experiment, iterating until the experience feels just right.
           </p>
           <p className="ab-text">
-            Today I work as a <strong>Frontend Developer</strong> and{" "}
+            Today I work as a <strong>Full-Stack Developer</strong>,{" "}
             <strong>Mobile App Developer</strong> (iOS &amp; Android with React
-            Native), turning ideas into polished, production-ready products.
+            Native), and <strong>Cloud Engineer</strong> — bridging the gap
+            between beautiful interfaces, robust backends, and scalable cloud
+            infrastructure.
           </p>
         </section>
 
@@ -64,6 +69,18 @@ const About = () => {
               </li>
             ))}
           </ul>
+        </section>
+
+        {/* ── Cloud Engineering ── */}
+        <section className="ab-section">
+          <h2 className="ab-section-title">Cloud Engineering</h2>
+          <p className="ab-text">
+            Beyond the frontend, I architect and deploy scalable cloud solutions
+            using <strong>AWS</strong> (EC2, S3, Lambda), <strong>Docker</strong>,
+            and <strong>CI/CD pipelines</strong>. I design systems that are
+            resilient, cost-efficient, and ready to scale — from containerized
+            microservices to serverless architectures.
+          </p>
         </section>
 
         {/* ── Looking For ── */}
