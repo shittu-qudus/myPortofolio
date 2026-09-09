@@ -30,90 +30,94 @@ const Technologies: Tech[] = [
   { id: 9, photoUrl: "/icons/reactnative.png", tech: "React Native" },
   { id: 10, photoUrl: "/icons/expo.png", tech: "Expo" },
   { id: 11, photoUrl: "/icons/aws.png", tech: "AWS" },
-  { id: 10, photoUrl: "/icons/terraform.png", tech: "Terraform" },
-    { id: 11, photoUrl: "/icons/promtheus.png", tech: "Prometheus " },
-
+  { id: 12, photoUrl: "/icons/terraform.png", tech: "Terraform" }, // Fixed: was id: 10
+  { id: 13, photoUrl: "/icons/promtheus.png", tech: "Prometheus " }, // Fixed: was id: 11
 ];
 
 const Projects: Project[] = [
   {
-    id: 8,
+    id: 1, // Fixed: was 8
     logo: "/logo/truemind.png",
     about: "Talentflow is Trueminds Innovation's unified internal LMS designed to support 50+ interns across six disciplines: PM, UI/UX, Frontend, Backend, Graphic Design and Social Media.",
     title: "TalentFlow",
     url: "https://talentflow-eight-weld.vercel.app/",
   },
   {
-    id: 10,
+    id: 2, // Fixed: was 10
     logo: "/logo/throughmylens.png",
     about: "A modern photography booking platform with Google Calendar integration, Stripe payments, and automated email workflows for a seamless client experience.",
     title: "ThroughMyLens",
     url: "https://www.throughmylens.uk/",
   },
-   {
-    id: 10,
+  {
+    id: 3, // Fixed: was 10
     logo: "/logo/north.png",
     about: "A professional real estate platform built to showcase residential and commercial properties while providing clients with a seamless way to explore listings, view detailed property information, compare available options, and make enquiries. The platform combines a modern user experience with clear property presentation to help real estate businesses attract potential buyers, renters, and investors.",
-    title: "Noth&co",
+    title: "North&co", // Fixed: was "Noth&co"
     url: "https://nort-oc.vercel.app/",
   },
-  
-
   {
-    id: 1,
-    logo: "/logo/logo.png",
-    about: "A platform that connects skilled workers with those in need of reliable services, ensuring a trusted hiring process and better service delivery.",
-    title: "SkillHub",
-    url: "https://skill-hub-yk14.vercel.app/",
+    id: 4, // Fixed: was 6
+    logo: "/logo/exorai.png",
+about: "A modern logistics and freight platform connecting businesses to reliable global transportation solutions, with services spanning air freight, ocean shipping, road freight, secure warehousing, cargo handling, storage, and distribution.",
+    title: "EXORIA logistics ",
+    url: "https://exoria-five.vercel.app/",
   },
-   {
-    id: 0,
-   logo: "/logo/smarthire.jpg",
-     about: "SaaS tool that helps job seekers create ATS-optimized resumes and cover letters with AI-assisted rewriting and customizable templates.",
-     title: "SmartHire",
+  {
+    id: 5, // Fixed: was 0
+    logo: "/logo/smarthire.jpg",
+    about: "SaaS tool that helps job seekers create ATS-optimized resumes and cover letters with AI-assisted rewriting and customizable templates.",
+    title: "SmartHire",
     url: "https://smart-hire-ashy.vercel.app/",
   },
   {
-    id: 11,
+    id: 6, // Fixed: was 11
     logo: "/logo/autovault.png",
-about: "A comprehensive automotive platform that provides customers with a seamless way to browse, compare, buy, hire, and finance vehicles. The website features an extensive car listing system with detailed specifications, pricing, high-quality imagery, and flexible search and filtering options, making it easy for users to find vehicles that match their needs. With dedicated purchasing, vehicle hire, financing, and enquiry features, the platform serves as a complete digital showroom for automotive businesses looking to showcase their inventory, attract customers, and simplify the car-buying experience.",
-    title: "Noth&co",
+    about: "A comprehensive automotive platform that provides customers with a seamless way to browse, compare, buy, hire, and finance vehicles. The website features an extensive car listing system with detailed specifications, pricing, high-quality imagery, and flexible search and filtering options, making it easy for users to find vehicles that match their needs. With dedicated purchasing, vehicle hire, financing, and enquiry features, the platform serves as a complete digital showroom for automotive businesses looking to showcase their inventory, attract customers, and simplify the car-buying experience.",
+    title: "AutoVault", // Fixed: was "Noth&co"
     url: "https://auto-mobilz.vercel.app/",
   },
   {
-    id: 2,
+    id: 7, // Fixed: was 2
     logo: "/logo/image.png",
     about: "Website for an eco-conscious organization dedicated to sustainable waste management, recycling, and green practices.",
     title: "Greenville",
     url: "https://greenvilles.vercel.app/",
   },
   {
-    id: 3,
+    id: 8, // Fixed: was 3
     logo: "/logo/blacksfit.png",
     about: "A fully responsive, production e-commerce platform for a growing fashion brand — optimized for performance and currently live.",
     title: "BlacksFit",
     url: "https://www.blacksfit.com/",
   },
   {
-    id: 4,
+    id: 9, // Fixed: was 4
     logo: "/logo/laundry.png",
     about: "Smart laundry service platform with scheduling calendar, subscription plans, and an auto-responder for instant customer support.",
     title: "CleanEase",
     url: "https://clean-ease-orcin.vercel.app/",
   },
   {
-    id: 5,
+    id: 10, // Fixed: was 5
     logo: "/logo/nisha.png",
     about: "A visually striking photography portfolio and booking landing page built with Vite, React, and Tailwind CSS.",
     title: "Nisha Pics",
     url: "https://nisha-pics.vercel.app/",
   },
   {
-    id: 6,
+    id: 11, // Fixed: was 6
     logo: "/logo/thetechgirl.png",
     about: "Portfolio site for a product designer — clean layout, strong visual hierarchy, and end-to-end case studies.",
     title: "TheTechGirl",
     url: "https://azeez-adebola.vercel.app/",
+  },
+ {
+    id: 12, // Fixed: was 1
+    logo: "/logo/logo.png",
+    about: "A platform that connects skilled workers with those in need of reliable services, ensuring a trusted hiring process and better service delivery.",
+    title: "SkillHub",
+    url: "https://skill-hub-yk14.vercel.app/",
   },
 ];
 
